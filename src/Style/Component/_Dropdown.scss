@@ -1,4 +1,6 @@
 .dropdown {
+    margin-bottom: 10px;
+
     .btn-primary:hover {
         color: #f0f0f0;
         background-color: #f0f0f0;
@@ -24,5 +26,8 @@
 
     .dropdown-menu {
         width: 100%;
+    }
+    svg {
+        color: #4c57b8;
     }
 }

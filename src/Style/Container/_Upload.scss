@@ -1,0 +1,103 @@
+.upload-container {
+    padding: 10px 30px;
+
+    .top-content {
+        .top-text1 {
+            margin-top: 10px;
+            font-weight: bold;
+            font-size: medium;
+            color: $gray;
+        }
+        .top-text2 {
+            margin: 10px 0;
+            color: $light-gray;
+        }
+    }
+    .upload-pdf-container {
+        background: #fff;
+
+        .card {
+            padding: 0 30px;
+
+            .drop-content {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin: 30px 0 ;
+
+                .form-upload {
+                    border: 2px solid #e0dfdf;
+                    cursor: pointer;
+                    height: 250px;
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 5px;
+                    width: 100%;
+                    .form-content {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+
+                        .p-upload {
+                            color: $light-gray;
+                            margin-top: 5px;
+                        }
+                    }
+                }
+
+            }
+
+        }
+
+        .upload-pdf-bottom {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0 40px;
+
+            .bottom-text {
+                color: $light-gray;
+            }
+   
+        }
+    }
+
+    .progress-container {
+        margin: 40px 0;
+        .progress-text {
+            text-align: end;
+            font-weight: bold;
+            color: #5e5e5e;
+            white-space: nowrap;
+        }
+        .progress {
+            .pg1 {
+                background-color: #0156b3;   
+            }
+            .pg2 {
+                background-color: #5b626b;
+            }
+        }
+    }
+    .next-content {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 10px;
+    }
+}
+
+.button {
+    background: #0847a6;
+    color: $white;
+    padding: 13px 40px;
+    border-radius: 7px;
+    font-size: 13px;
+    transition: background .3s ease-in-out;
+    cursor: pointer;
+    &:hover {
+        background: #0c5dd6;
+    }
+}

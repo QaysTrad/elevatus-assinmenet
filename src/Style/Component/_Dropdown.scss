@@ -1,0 +1,28 @@
+.dropdown {
+    .btn-primary:hover {
+        color: #f0f0f0;
+        background-color: #f0f0f0;
+        border-color: #f0f0f0;
+    }
+    .dropdown-toggle {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: transparent;
+        border: transparent;
+        color: black;
+        .dropdown-content {
+            display: flex;
+            align-items: center;
+
+            .dropdown-text {
+                margin-left: 20px;
+            }
+        }
+    }
+
+    .dropdown-menu {
+        width: 100%;
+    }
+}

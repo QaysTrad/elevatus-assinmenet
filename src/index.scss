@@ -5,7 +5,7 @@
           sans-serif;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
-      background: #f0f0f0 !important;
+      background: #eeeeee !important;
   }
 
   code {
@@ -19,3 +19,6 @@
   @import './Style/Component/NotFound';
   @import './Style/Container/Home';
   @import './Style/Container/Upload';
+  @import './Style/Container/Show';
+  @import './Style/Component/Search';
+  @import './Style/Component/Dropdown';

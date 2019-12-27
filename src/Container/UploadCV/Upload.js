@@ -12,6 +12,12 @@ const Upload = ({ history }) => {
   });
 
   const uploadCV = e => {
+    setState({
+      numberOfUpload: 0,
+      numberOfBalance: 15,
+      done: false
+    });
+
     if (e.length <= 15) {
       setState(prevState => ({
         numberOfUpload: e.length,
@@ -33,17 +39,14 @@ const Upload = ({ history }) => {
       </div>
       <div className="upload-pdf-container">
         <Card>
-          <Dropzone
-            multiple
-            onDrop={acceptedFiles => console.log(acceptedFiles)}
-          >
+          <Dropzone multiple onDrop={acceptedFiles => uploadCV(acceptedFiles)}>
             {({ getRootProps, getInputProps }) => (
               <div className="drop-content">
-                <section className="form-upload">
-                  <div {...getRootProps()} className="form-content">
+                <section {...getRootProps()} className="form-upload">
+                  <div className="form-content">
                     <input
                       {...getInputProps()}
-                      accept="application/pdf,application/vnd.ms-excel"
+                      // accept="application/pdf,application/vnd.ms-excel"
                     />
                     <img
                       alt="Test"

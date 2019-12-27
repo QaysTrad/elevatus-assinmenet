@@ -1,0 +1,117 @@
+.show-container {
+    padding: 10px 30px;
+    display: flex;
+
+    .light-text {
+        color: #797979;
+    }
+
+    .heavy-text {
+        color: #495057;
+    }
+
+    .card {
+        margin-bottom: 20px;
+    }
+
+    .show-content {
+        background: #fafafa;
+        padding: 10px 10px;
+
+        .top-text {
+            font-size: 15px;
+            margin: 10px 0;
+        }
+
+        .cv-content {
+            padding: 10px 10px;
+            display: flex;
+            justify-content: space-between;
+
+            .profile-pic-content {
+                padding: 10px 0px 0 30px;
+                flex-direction: column;
+                justify-content: end;
+
+                .profile-pic {
+                    border-radius: 50%;
+                    width: 40px;
+                }
+            }
+
+            .applicant-content {
+                margin-bottom: 10px;
+
+                svg {
+                    margin-right: 10px;
+                    color: #0156b3;
+                    align-self: center;
+                }
+
+                .applicant-text {
+                    color: #0156b3;
+                    font-weight: bold;
+                    margin: 11px 0;
+                }
+
+                .applicant-position {
+                    .applicant-year {
+                        margin-left: 5px;
+                        font-weight: bold;
+                    }
+                }
+
+                .appicant-more {
+                    color: #0156b3;
+                    font-weight: bold;
+                }
+
+            }
+
+            .person-likes {
+                display: flex;
+                flex-wrap: wrap;
+                margin-bottom: 15px;
+
+                span {
+                    padding: 10px 9px;
+                    margin: 10px 5px 0;
+                    background: #f0f0f0;
+                }
+            }
+
+            .check-content {
+                svg {
+                    color: #5da340;
+
+                }
+            }
+        }
+
+    }
+
+    .col-4 {
+        .card {
+            .card-header {
+                color: #fff;
+                background: #4c57b8;
+            }
+
+            .card-body {
+                height: 513px;
+                svg {
+                    color: #4c57b8;
+                }
+                .dropdwon-content {
+                    margin-bottom: 20px;
+                }
+                .search-contaniner {
+                    .search-content {
+                        margin-bottom: 15px;
+                    }
+                }
+
+            }
+        }
+    }
+}

@@ -126,12 +126,11 @@ const Upload = ({ history }) => {
             className="pg1"
             now={Math.round((parseInt(state.numberOfBalance, 10) / 15) * 100)}
             key={1}
-            color={"#5b626b"}
           />
           <ProgressBar
             className="pg2"
             now={Math.round((state.numberOfUpload / 15) * 100)}
-            key={3}
+            key={2}
           />
         </ProgressBar>
 

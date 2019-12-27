@@ -80,14 +80,7 @@
                 color: #5e5e5e;
                 white-space: nowrap;
             }
-            .progress {
-                .pg1 {
-                    background-color: #0156b3;   
-                }
-                .pg2 {
-                    background-color: #5b626b;
-                }
-            }
+         
             @media (max-width: 400px) {
                 flex-direction: column;
                 align-items: flex-start;
@@ -116,4 +109,11 @@
 
 .flex {
     display: flex;
+}
+
+.pg1 {
+    background: #0156b3 !important;   
+}
+.pg2 {
+    background-color: #5b626b !important;
 }

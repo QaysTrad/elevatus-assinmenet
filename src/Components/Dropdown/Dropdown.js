@@ -4,6 +4,7 @@ import { DropdownButton, Dropdown } from "react-bootstrap";
 
 const DropdownCustom = ({ icon, list, name }) => (
   <DropdownButton
+    id={name}
     title={
       <div className="dropdown-content">
         <FontAwesomeIcon icon={icon} />

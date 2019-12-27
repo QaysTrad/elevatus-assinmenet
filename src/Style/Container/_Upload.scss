@@ -17,14 +17,14 @@
         background: #fff;
 
         .card {
-            padding: 0 30px;
+            padding: 0 40px;
 
             .drop-content {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                margin: 30px 0 ;
+                margin: 40px 0 20px;
 
                 .form-upload {
                     border: 2px solid #e0dfdf;
@@ -100,4 +100,8 @@
     &:hover {
         background: #0c5dd6;
     }
+}
+
+.flex {
+    display: flex;
 }

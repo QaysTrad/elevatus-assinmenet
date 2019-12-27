@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { ProgressBar, Card } from "react-bootstrap";
 import Dropzone from "react-dropzone";
 import uploadPhoto from "../../Assets/Images/upload-1118929_640.png";
 import { toast } from "react-toastify";
 
 const Upload = ({ history }) => {
+  const size = useWindowSize();
+
   const [state, setState] = useState({
     numberOfUpload: 0,
     numberOfBalance: 15,
@@ -86,23 +88,34 @@ const Upload = ({ history }) => {
         </Card>
       </div>
       <div className="progress-container">
-        <div style={{ display: "flex" }}>
+        <div className="progress-content">
           <div
-            style={{
-              width: `${Math.round(
-                (parseInt(state.numberOfBalance, 10) / 15) * 100
-              ) + 20}%`,
-              textAlign: "center"
-            }}
+            style={
+              size.width < 630
+                ? {}
+                : {
+                    width: `${Math.round(
+                      (parseInt(state.numberOfBalance, 10) / 15) * 100
+                    ) + 20}%`,
+                    textAlign: "center"
+                  }
+            }
             className="progress-text"
           >
             {Math.round((parseInt(state.numberOfBalance, 10) / 15) * 100)}{" "}
             Resumes Balance
           </div>
           <div
-            style={{
-              width: `${Math.round((state.numberOfUpload / 15) * 100) + 20}%`
-            }}
+            style={
+              size.width < 630
+                ? {
+                    width: "100%"
+                  }
+                : {
+                    width: `${Math.round((state.numberOfUpload / 15) * 100) +
+                      20}%`
+                  }
+            }
             className="progress-text"
           >
             {Math.round((state.numberOfUpload / 15) * 100)} Resumes Uploaded
@@ -132,6 +145,34 @@ const Upload = ({ history }) => {
       </div>
     </div>
   );
+};
+
+const useWindowSize = () => {
+  const isClient = typeof window === "object";
+
+  const getSize = () => {
+    return {
+      width: isClient ? window.innerWidth : undefined,
+      height: isClient ? window.innerHeight : undefined
+    };
+  };
+
+  const [windowSize, setWindowSize] = useState(getSize);
+
+  useEffect(() => {
+    if (!isClient) {
+      return false;
+    }
+
+    function handleResize() {
+      setWindowSize(getSize());
+    }
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  });
+
+  return windowSize;
 };
 
 export default Upload;

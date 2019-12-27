@@ -61,24 +61,36 @@
             .bottom-text {
                 color: $light-gray;
             }
-   
+            @media (max-width: 630px) {
+                .bottom-text {
+                    margin-bottom: 10px;
+                }
+                flex-direction: column;
+            }
         }
     }
 
     .progress-container {
         margin: 40px 0;
-        .progress-text {
-            text-align: end;
-            font-weight: bold;
-            color: #5e5e5e;
-            white-space: nowrap;
-        }
-        .progress {
-            .pg1 {
-                background-color: #0156b3;   
+        .progress-content {
+            display: flex;
+            .progress-text {
+                text-align: end;
+                font-weight: bold;
+                color: #5e5e5e;
+                white-space: nowrap;
             }
-            .pg2 {
-                background-color: #5b626b;
+            .progress {
+                .pg1 {
+                    background-color: #0156b3;   
+                }
+                .pg2 {
+                    background-color: #5b626b;
+                }
+            }
+            @media (max-width: 400px) {
+                flex-direction: column;
+                align-items: flex-start;
             }
         }
     }

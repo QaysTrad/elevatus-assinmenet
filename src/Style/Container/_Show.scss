@@ -81,6 +81,8 @@
             }
 
             .check-content {
+                display: flex;
+                justify-content: space-between;
                 svg {
                     color: #5da340;
 
@@ -128,20 +130,21 @@
         }
     }
 }
-        .card-body {
-            .dropdwon-content {
-                margin-bottom: 20px;
-            }
-        
-            .search-contaniner {
-                .search-content {
-                    margin-bottom: 15px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    flex-direction: column;
-                    width: 100%;
-                }
-            }
-    
+
+.card-body {
+    .dropdwon-content {
+        margin-bottom: 20px;
+    }
+
+    .search-contaniner {
+        .search-content {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: 100%;
         }
+    }
+
+}

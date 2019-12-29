@@ -369,7 +369,6 @@ const Show = () => {
             }
             style={{
               background: "#4c57b8",
-              marginBottom: 10,
               float: "right"
             }}
             className="button"
